@@ -1,0 +1,241 @@
+body{
+    background-color: rgb(92, 155, 244);
+}
+.main{
+    height: 600px;
+    width: 600px;
+    border: 1px solid black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 30%;
+    top: 20px;
+}
+.head{
+    height: 150px;
+    width: 200px;
+    border-radius: 100px 100px 0px 0px;
+    background-color:yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-color: black;
+    
+
+}
+.eyes{
+    height:25px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.left-eye{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: rgb(1, 1, 1);
+    
+    
+}
+.right-eye{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: rgb(7, 7, 7);
+    
+    
+}
+.con1{
+     height: 200px;
+     width: 280px;
+    padding-top: 10px;
+    display: flex;
+  
+    justify-content: space-between;
+
+    
+
+}
+.left-hand{
+     height: 150px;
+     width: 30px;
+     margin-top: 10px;
+     border-radius: 10px 10px 10px 10px;
+    background-color:yellow;
+    
+    
+}
+.body{
+    height: 200px;
+    width: 200px;
+    border-radius: 0px 0px 90px 90px;
+    background-color:yellow;
+}
+.right-hand{
+     height: 150px;
+     width: 30px;
+     margin-top: 10px;
+     border-radius: 10px 10px 10px 10px;
+    background-color:yellow;
+}
+.con2{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+.leg-left{
+    position: relative;
+    bottom: 20px;
+    height: 110px;
+    width: 40px;
+     border-radius: 15px 15px 15px 15px;
+   background-color:yellow;
+
+}
+.leg-right{
+     position: relative;
+    bottom: 20px;
+    height: 110px;
+    width: 40px;
+     border-radius: 15px 15px 15px 15px;
+    background-color:yellow;
+    border-color: black;
+}
+.main:hover .head{
+    animation: width 1s ease 1s infinite;
+}
+@keyframes width{
+    0%{
+        width:200px;
+    }
+    50%{
+        width: 250px;
+    }
+    100%{
+        width:200px;
+    }
+}
+.main:hover .eyes{
+    animation:transform 1s ease 1s infinite ;
+}
+@keyframes transform{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform: translate(-30px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+.main:hover .body{
+   animation:rotate-body 0.5s ease 1s infinite;
+}
+@keyframes rotate-body{
+    0%{
+        rotate: 0deg;
+        border-radius: 40px 40px 40px 40px;
+    }
+    100%{
+        rotate: 360deg;
+        border-radius: 90px 90px 90px 90px;
+    }
+}
+
+.main:hover .left-hand {
+  animation: rotate-lefthand 1s ease 1s infinite forwards;
+}
+@keyframes rotate-lefthand {
+  0% { 
+    rotate: 0px; 
+     transform-origin: top center;
+}
+  50%{ 
+    rotate: 90deg; 
+     transform-origin: top center;
+}
+  100% { 
+    rotate: 0px; 
+     transform-origin: top center;
+}
+}
+.main:hover .right-hand {
+  animation: rotate-righthand 1s ease 1s infinite forwards;
+}
+@keyframes rotate-righthand {
+  0% {
+     rotate: 0px;
+      transform-origin: top center;
+     }
+  50%{ 
+    rotate: -90deg;
+     transform-origin: top center;
+ }
+  100%{ 
+    rotate: 0px;
+     transform-origin: top center;
+ }
+}
+
+.main:hover .leg-left {
+  animation: rotate-legleft 1s ease 1s infinite forwards;
+}
+@keyframes rotate-legleft {
+  0%{ 
+    rotate: 0px; 
+     transform-origin: top center;
+}
+  50%{ 
+    rotate: 50deg; 
+     transform-origin: top center;
+}
+  100%{ 
+    rotate: 0px; 
+     transform-origin: top center;
+}
+}
+.main:hover .leg-right {
+  animation: rotate-legright 1s ease 1s infinite forwards;
+}
+@keyframes rotate-legright {
+  0% {
+     rotate: 0px;
+      transform-origin: top center;
+     }
+  50%{ 
+    rotate: -50deg;
+     transform-origin: top center;
+ }
+  100%{ 
+    rotate: 0px; 
+     transform-origin: top center;
+}
+}
+.main:hover {
+    animation: coloring 3s infinite linear;
+    border-radius: 100px;
+    transform-origin:center;
+}
+@keyframes coloring{
+    0%{
+        background-color:orange;
+    }
+    20%{
+        background-color: white;
+    }
+    40%{
+        background-color:green;
+    }
+    60%{
+        background-color:orange;
+    }
+    80%{
+        background-color:white;
+    }
+    100%{
+        background-color: green;
+    }
+}
